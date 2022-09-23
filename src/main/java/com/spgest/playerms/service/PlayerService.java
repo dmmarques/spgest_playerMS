@@ -1,11 +1,17 @@
 package com.spgest.playerms.service;
 
 
-import com.spgest.playerms.domain.Player;
+import com.spgest.playerms.dto.PlayerCreationDTO;
+import com.spgest.playerms.dto.PlayerDTO;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PlayerService {
 
-    public List<Player> getAllPlayers();
+    List<PlayerDTO> getAllPlayers();
+
+    Optional<PlayerDTO> getPlayerByEmail(String email);
+
+    void savePlayer(PlayerCreationDTO playerCreationDTO);
 }

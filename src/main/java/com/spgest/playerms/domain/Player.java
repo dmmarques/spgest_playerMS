@@ -23,8 +23,17 @@ public class Player {
     private String msisdn;
     private Address address;
     private Gender gender;
-    private LocalDateTime dob;
+    private String dob;
     @Transient
     private int age;
 
+    public Player(String firstName, String lastName, String email, String msisdn, Address address, Gender gender, String dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.msisdn = msisdn;
+        this.address = address;
+        this.gender = gender;
+        this.dob = dob;
+    }
 }
